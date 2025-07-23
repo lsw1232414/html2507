@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>도서 주문하기</title>
+
+    <style>
+        label {
+            width: 100px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 300px;
+            box-sizing: border-box;
+        }
+
+        li {
+            margin-bottom: 8px;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        button {
+            padding: 6px 12px;
+        }
+
+        .radio-group {
+            display: inline-block;
+            width: 300px;
+        }
+
+        textarea#note {
+            vertical-align: top;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+            flex-direction: row-reverse;
+        }
+        #find-address {
+            height: 34px;
+            padding: 0 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>도서 주문하기</h1>
+
+    <form>
+        <fieldset>
+            <legend>배송정보</legend>
+            <ul id="shipping"></ul>
+            <ul>
+                <li>
+                    <label for="book-select">도서 선택</label>
+                    <select id="book-select" required>
+                        <option value="novel" selected>소설</option>
+                        <option value="cook">요리</option>
+                        <option value="history">역사</option>
+                        <option value="it">IT</option>
+                    </select>
+                </li>
+
+                <li>
+                    <label for="user-name">이름</label>
+                    <input type="text" id="user-name" autofocus required />
+                </li>
+                <li>
+                    <label for="address">배송 주소</label>
+                    <input type="text" id="address" placeholder="예) 서울시 강남구 테헤란로 123" />
+                    <button type="button" id="find-address">찾기</button>
+                </li>
+
+                <li>
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" placeholder="예) example@example.com" />
+                </li>
+                <li>
+                    <label for="phone">연락처</label>
+                    <input type="tel" id="phone" placeholder="하이픈 없이 숫자만 입력" />
+                </li>
+                <li>
+                    <label for="delivery-date">배송 희망일</label>
+                    <input type="date" id="delivery-date" />
+                    <small>※주문일로부터 최소 2일 이후 선택 가능</small>
+                </li>
+
+                <li>
+                    <label>배송 방법</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="delivery-method" value="courier" checked />택배</label>
+                        <label><input type="radio" name="delivery-method" value="quick" />퀵서비스</label>
+                        <label><input type="radio" name="delivery-method" value="pickup" />방문수령</label>
+                    </div>
+                </li>
+
+
+
+
+                <li>
+                    <label for="note">요청사항</label>
+                    <textarea id="note" cols="40" rows="2" placeholder="배송 관련 요청사항을 적어주세요"></textarea>
+                </li>
+
+            </ul>
+
+            <div>
+                <button type="submit">주문하기</button>
+                <button type="reset">지우기</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>

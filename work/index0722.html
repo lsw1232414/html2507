@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>회원가입</title>
+<link rel="stylesheet" href="index0722_2.css">
+        
+</head>
+
+<body>
+    <form>
+        <label>아이디
+            <input type="text" required>
+        </label>
+        <label>이메일
+            <input type="email" required>
+        </label>
+        <label>비밀번호
+            <input type="password" required>
+        </label>
+        <label>비밀번호 확인
+            <input type="password" required>
+        </label>
+        <label>가입 경로
+            <select>
+                <option>블로그</option>
+                <option>검색</option>
+                <option>SNS</option>
+                <option>기타</option>
+            </select>
+        </label>
+        <label>메모
+            <textarea placeholder="남길 말씀이 있다면 여기에"></textarea>
+        </label>
+        <div class="radio-group">
+            <label><input type="radio" name="mailing" value="yes"> 수신 동의</label>
+            <label><input type="radio" name="mailing" value="no"> 수신 거부</label>
+        </div>
+        <div class="button-group">
+            <input type="submit" value="가입">
+            <input type="reset" value="취소">
+        </div>
+    </form>
+</body>
+
+</html>
