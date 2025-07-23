@@ -1,41 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 과제방</title>
     <style>
-        table,tr,td{
-            display: block;
-            border-collapse: collapse;
-            border: 1px solid rebeccapurple;
+        body {
+            background: #f4f4f4;
+            color: #222;
+            padding: 32px;
+        }
+
+        h1 {
+            font-size: 32px;
+            text-align: center;
+            color: #000000;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+        }
+
+
+        .hw {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 16px;
+            text-align: center;
+            border-radius: 6px;
+        }
+
+        .hw-title {
+            font-size: 15px;
+            color: #555;
+        }
+
+        .hw a {
+            font-size: 16px;
+            color: blue;
+            text-decoration: none;
         }
     </style>
 </head>
+
 <body>
     <h1>나의 과제방</h1>
-    <table>
-        <tr>
-            <td>day01_0716</td>
-            <td><a href="./work/index0716.html">0716</a></td>
-            <td>day01_0717</td>
-            <td><a href="./work/index0717.html">0717</a></td>
-            <td>day01_0718</td>
-            <td><a href="./work/index0718.html">0718</a></td>
-            <td>day01_0721</td>
-            <td><a href="./work/index0721.html">0721</a></td>
-            <td>day01_0722</td>
-            <td><a href="./work/index0722.html">0722</a></td>
-            <td>day01_0723</td>
-            <td><a href="./work/index0723.html">0723</a></td>
-            <td>day01_0724</td>
-            <td><a href="./work/index0724.html">0724</a></td>
-            <td>day01_0725</td>
-            <td><a href="./work/index0725.html">0725</a></td>
 
-            
-        </tr>
-    </table>
-    
-</body> 
+    <div class="grid">
+        <div class="hw">
+            <div class="hw-title">day01_0716</div>
+            <a href="./work/index0716.html">0716</a>
+        </div>
+        <div class="hw">
+            <div class="hw-title">day01_0717</div>
+            <a href="./work/index0717.html">0717</a>
+        </div>
+        <div class="hw">
+            <div class="hw-title">day01_0718</div>
+            <a href="./work/index0718.html">0718</a>
+        </div>
+        <div class="hw">
+            <div class="hw-title">day01_0721</div>
+            <a href="./work/index0721.html">0721</a>
+        </div>
+        <div class="hw">
+            <div class="hw-title">day01_0722</div>
+            <a href="./work/index0722.html">0722</a>
+        </div>
+        <div class="hw">
+            <div class="hw-title">day01_0723</div>
+            <a href="./work/index0723.html">0723</a>
+        </div>
+        <div class="hw">
+            <div class="hw-title">day01_0724</div>
+            <a href="./work/index0724.html">0724</a>
+        </div>
+        <div class="hw">
+            <div class="hw-title">day01_0725</div>
+            <a href="./work/index0725.html">0725</a>
+        </div>
+    </div>
+</body>
+
 </html>
