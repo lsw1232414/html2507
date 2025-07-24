@@ -10,24 +10,45 @@
             background: #f4f4f4;
             color: #222;
             padding: 32px;
-        }
-        p{
-            text-align: center;
-            font-size: 20px;
+            font-family: sans-serif;
         }
 
         h1 {
             font-size: 40px;
             text-align: center;
-            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+
+        .weekday-header {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .week-section {
+            margin-bottom: 40px;
+        }
+
+        .week-label {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 10px;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(7, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             gap: 10px;
         }
-
 
         .hw {
             background: #fff;
@@ -35,11 +56,13 @@
             padding: 16px;
             text-align: center;
             border-radius: 6px;
+            min-height: 60px;
         }
 
         .hw-title {
             font-size: 15px;
             color: #555;
+            margin-bottom: 6px;
         }
 
         .hw a {
@@ -47,10 +70,20 @@
             color: blue;
             text-decoration: none;
             display: block;
+            transition: transform 0.2s;
         }
 
         .hw a:hover {
             transform: scale(1.2);
+        }
+
+        .empty {
+            /* 빈칸도 grid 내 공간 차지 */
+        }
+
+        .hw.empty {
+            background: #f4f4f4;
+            border: none;
         }
     </style>
 </head>
@@ -59,40 +92,142 @@
     <h1>LSW's Projects</h1>
     <p>AI 활용 실무 프로젝트 기반 풀스택</p>
 
-    <div class="grid">
-        <div class="hw">
-            <div class="hw-title">day01_0716</div>
-            <a href="./work/index0716.html" target="_blank">0716</a>
-        </div>
-        <div class="hw">
-            <div class="hw-title">day02_0717</div>
-            <a href="./work/index0717.html" target="_blank">0717</a>
-        </div>
-        <div class="hw">
-            <div class="hw-title">day03_0718</div>
-            <a href="./work/index0718.html" target="_blank">0718</a>
-        </div>
-        <div class="hw">
-            <div class="hw-title">day04_0721</div>
-            <a href="./work/index0721.html" target="_blank">0721</a>
-        </div>
-        <div class="hw">
-            <div class="hw-title">day05_0722</div>
-            <a href="./work/index0722.html" target="_blank">0722</a>
-        </div>
-        <div class="hw">
-            <div class="hw-title">day06_0723</div>
-            <a href="./work/index0723.html" target="_blank">0723</a>
-        </div>
-        <div class="hw">
-            <div class="hw-title">day07_0724</div>
-            <a href="./work/index0724.html" target="_blank">0724</a>
-        </div>
-        <div class="hw">
-            <div class="hw-title">day08_0725</div>
-            <a href="./work/index0725.html" target="_blank">0725</a>
+    <!-- 최상단 요일 표시 (한 번만) -->
+    <div class="weekday-header">
+        <div>월</div>
+        <div>화</div>
+        <div>수</div>
+        <div>목</div>
+        <div>금</div>
+    </div>
+
+    <!-- 1주차 -->
+    <div class="week-section">
+        <div class="week-label">1주차</div>
+        <div class="grid">
+            <div class="hw empty"></div> <!-- 월 -->
+            <div class="hw empty"></div> <!-- 화 -->
+            <div class="hw">
+                <div class="hw-title">day01_0716</div>
+                <a href="./work/index0716.html" target="_blank">0716</a>
+            </div> <!-- 수 -->
+            <div class="hw">
+                <div class="hw-title">day02_0717</div>
+                <a href="./work/index0717.html" target="_blank">0717</a>
+            </div> <!-- 목 -->
+            <div class="hw">
+                <div class="hw-title">day03_0718</div>
+                <a href="./work/index0718.html" target="_blank">0718</a>
+            </div> <!-- 금 -->
         </div>
     </div>
+
+    <!-- 2주차 -->
+    <div class="week-section">
+        <div class="week-label">2주차</div>
+        <div class="grid">
+            <div class="hw">
+                <div class="hw-title">day04_0721</div>
+                <a href="./work/index0721.html" target="_blank">0721</a>
+            </div> <!-- 월 -->
+            <div class="hw">
+                <div class="hw-title">day05_0722</div>
+                <a href="./work/index0722.html" target="_blank">0722</a>
+            </div> <!-- 화 -->
+            <div class="hw">
+                <div class="hw-title">day06_0723</div>
+                <a href="./work/index0723.html" target="_blank">0723</a>
+            </div> <!-- 수 -->
+            <div class="hw">
+                <div class="hw-title">day07_0724</div>
+                <a href="./work/index0724.html" target="_blank">0724</a>
+            </div> <!-- 목 -->
+            <div class="hw">
+                <div class="hw-title">day08_0725</div>
+                <a href="./work/index0725.html" target="_blank">0725</a>
+            </div> <!-- 금 -->
+        </div>
+    </div>
+
+    <!-- 3주차 -->
+    <div class="week-section">
+        <div class="week-label">3주차</div>
+        <div class="grid">
+            <div class="hw">
+                <div class="hw-title">day09_0728</div>
+                <a href="./work/index0728.html" target="_blank">0728</a>
+            </div> <!-- 월 -->
+            <div class="hw">
+                <div class="hw-title">day10_0729</div>
+                <a href="./work/index0729.html" target="_blank">0729</a>
+            </div> <!-- 화 -->
+            <div class="hw">
+                <div class="hw-title">day11_0730</div>
+                <a href="./work/index0730.html" target="_blank">0730</a>
+            </div> <!-- 수 -->
+            <div class="hw">
+                <div class="hw-title">day12_0731</div>
+                <a href="./work/index0731.html" target="_blank">0731</a>
+            </div> <!-- 목 -->
+            <div class="hw">
+                <div class="hw-title">day13_0801</div>
+                <a href="./work/index0801.html" target="_blank">0801</a>
+            </div> <!-- 금 -->
+        </div>
+    </div>
+
+    <!-- 4주차 -->
+    <div class="week-section">
+        <div class="week-label">4주차</div>
+        <div class="grid">
+            <div class="hw">
+                <div class="hw-title">day14_0804</div>
+                <a href="./work/index0804.html" target="_blank">0804</a>
+            </div> <!-- 월 -->
+            <div class="hw">
+                <div class="hw-title">day15_0805</div>
+                <a href="./work/index0805.html" target="_blank">0805</a>
+            </div> <!-- 화 -->
+            <div class="hw">
+                <div class="hw-title">day16_0806</div>
+                <a href="./work/index0806.html" target="_blank">0806</a>
+            </div> <!-- 수 -->
+            <div class="hw">
+                <div class="hw-title">day17_0807</div>
+                <a href="./work/index0807.html" target="_blank">0807</a>
+            </div> <!-- 목 -->
+            <div class="hw">
+                <div class="hw-title">day18_0808</div>
+                <a href="./work/index0808.html" target="_blank">0808</a>
+            </div> <!-- 금 -->
+        </div>
+    </div>
+
+    <!-- 5주차 -->
+    <div class="week-section">
+        <div class="week-label">5주차</div>
+        <div class="grid">
+            <div class="hw">
+                <div class="hw-title">day19_0811</div>
+                <a href="./work/index0811.html" target="_blank">0811</a>
+            </div> <!-- 월 -->
+            <div class="hw">
+                <div class="hw-title">day20_0812</div>
+                <a href="./work/index0812.html" target="_blank">0812</a>
+            </div> <!-- 화 -->
+            <div class="hw">
+                <div class="hw-title">day21_0813</div>
+                <a href="./work/index0813.html" target="_blank">0813</a>
+            </div> <!-- 수 -->
+            <div class="hw">
+                <div class="hw-title">day22_0814</div>
+                <a href="./work/index0814.html" target="_blank">0814</a>
+            </div> <!-- 목 -->
+            <div class="hw empty"></div> <!-- 금: 0815 광복절 -->
+        </div>
+    </div>
+    </div>
+
 </body>
 
 </html>
