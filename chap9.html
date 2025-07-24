@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>배경 스타일 모음</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: sans-serif;
+      background: #f9f9f9;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .box {
+      width: 500px;
+      height: 300px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .linear1 {
+      background: linear-gradient(to bottom right, blue, white);
+    }
+
+    .linear2 {
+      background: linear-gradient(45deg, #f00, #fff);
+    }
+
+    .linear3 {
+      background: linear-gradient(to bottom, #06f 0%, white 30%, #06f 100%);
+    }
+
+    .pattern1 {
+      background: repeating-linear-gradient(to right, yellow, red 20px);
+    }
+
+    .pattern2 {
+      background: repeating-radial-gradient(circle, white, #ccc 10%);
+    }
+
+    .desc {
+      border: 5px dotted #222;
+      background-color: #ffd9a0;
+      width: 350px;
+      padding: 20px;
+      margin-right: 20px;
+      float: left;
+    }
+
+    #clip-border {
+      background-clip: border-box;
+    }
+
+    #clip-padding {
+      background-clip: padding-box;
+    }
+
+    #clip-content {
+      background-clip: content-box;
+    }
+
+    #container {
+      width: 1100px;
+      margin: 50px auto;
+      overflow: hidden;
+    }
+
+    .bg-img-box {
+      float: left;
+      width: 300px;
+      height: 300px;
+      margin: 10px;
+      border: 1px solid #222;
+      background: url('images/bg4.jpg') no-repeat left top;
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h2>Linear Gradient 1</h2>
+    <div class="box linear1"></div>
+  </section>
+
+  <section>
+    <h2>Linear Gradient 2 (45도)</h2>
+    <div class="box linear2"></div>
+  </section>
+
+  <section>
+    <h2>Linear Gradient 3 (중간 white)</h2>
+    <div class="box linear3"></div>
+  </section>
+
+  <section>
+    <h2>Pattern: 선형 반복</h2>
+    <div class="box pattern1"></div>
+  </section>
+
+  <section>
+    <h2>Pattern: 원형 반복</h2>
+    <div class="box pattern2"></div>
+  </section>
+
+  <section style="clear:both">
+    <h2>Background Clip</h2>
+    <div class="desc" id="clip-border">
+      <h3>레드향</h3>
+      <p><b>껍질</b>에 붉은 빛이 돌아 레드향이라 불린다.</p>
+    </div>
+    <div class="desc" id="clip-padding">
+      <h3>레드향</h3>
+      <p><b>껍질</b>에 붉은 빛이 돌아 레드향이라 불린다.</p>
+    </div>
+    <div class="desc" id="clip-content">
+      <h3>레드향</h3>
+      <p><b>껍질</b>에 붉은 빛이 돌아 레드향이라 불린다.</p>
+    </div>
+  </section>
+
+  <section style="clear:both">
+    <h2>배경 이미지 박스들</h2>
+    <div id="container">
+      <div class="bg-img-box"></div>
+      <div class="bg-img-box"></div>
+      <div class="bg-img-box"></div>
+      <div class="bg-img-box"></div>
+      <div class="bg-img-box"></div>
+      <div class="bg-img-box"></div>
+    </div>
+  </section>
+
+
+
+
+</body>
+
+</html>

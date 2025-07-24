@@ -87,3 +87,20 @@ p {
     box-shadow: none;
     pointer-events: none;
 }
+
+.hw-title {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.hw-title .day {
+    display: block;
+    color: #333;
+}
+
+.hw-title .date {
+    display: block;
+    font-size: 13px;
+    color: #777;
+}
