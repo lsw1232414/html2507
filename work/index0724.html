@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 위치 속성</title>
+  <style>
+    p {
+      width: 500px;
+      height: 200px;
+      background-color: #eee;
+      border: 1px solid #ccc;
+      line-height: 2;
+    }
+
+    #static {
+      position: static;
+    }
+
+    #relative-1 {
+      position: relative;
+    }
+
+    #relative-2 {
+      position: relative;
+      left: 100px;
+      top: -50px;
+    }
+
+    #fixed {
+      width: 100px;
+      height: 100px;
+      background-color: #222;
+      position: fixed;
+      right: 30px;
+      top: 30px;
+    }
+    
+  </style>
+  <link rel="stylesheet" href="css/index0724.css">
+</head>
+
+<body>
+  <p id="static">EX et adipisicing</p>
+  <p id="relative-1">lorem ipsum reprehenderit....</p>
+  <p id="relative-2">excepteur voluptate ad</p>
+  <p id="fixed"></p>
+
+  <div id="contents">
+    <h1>CSS3</h1>
+  </div>
+
+</body>
+
+</html>
