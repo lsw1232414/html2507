@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>통합 예제</title>
+  <link rel="stylesheet" href="css/chap10style.css  " />
+  <style>
+    html {
+      font-size: 16px;
+    }
+
+    /* em 단위 예제 */
+    .em-example p {
+      font-size: 1em;
+    }
+
+    /* rem 단위 예제 */
+    .rem-example p {
+      font-size: 1.2rem;
+    }
+
+    /* 반응형 이미지 */
+    .responsive-image img {
+      width: 100%;
+      height: auto;
+      max-width: 600px;
+    }
+
+    /* object-fit 예제 */
+    .object-fit-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .fit-box {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #000;
+      text-align: center;
+    }
+
+    .fit-box img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .fill        { object-fit: fill; }
+    .contain     { object-fit: contain; }
+    .cover       { object-fit: cover; }
+    .none        { object-fit: none; }
+    .scale-down  { object-fit: scale-down; }
+
+    /* 배경 오버라이드가 필요할 경우 */
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      body {
+        background-color: gray;
+        color: white;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>em / rem 예제</h1>
+  <section class="em-example">
+    <p>이 문장은 <strong>em 단위</strong>로 크기가 설정되어 있습니다.</p>
+  </section>
+  <section class="rem-example">
+    <p>이 문장은 <strong>rem 단위</strong>로 크기가 설정되어 있습니다.</p>
+  </section>
+
+  <h1>카드 레이아웃</h1>
+  <div id="container">
+    <div class="card">
+      <img src="images/1.jpg" alt="명언1" />
+      <div class="words">
+        <h2>일 분 전만큼 먼 시간은 없다.</h2>
+        <h3>- Jim Bishop</h3>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/2.jpg" alt="명언2" />
+      <div class="words">
+        <h2>낡은 옷은 그냥 입고 새 책을 사라.</h2>
+        <h3>- Austin Phelps</h3>
+      </div>
+    </div>
+  </div>
+
+  <h1>반응형 이미지</h1>
+  <section class="responsive-image">
+    <p>브라우저 창의 크기를 조절해보세요.</p>
+    <img src="images/kitten.jpg" alt="베개 뒤 고양이" />
+  </section>
+
+  <h1>object-fit 속성</h1>
+  <section class="object-fit-container">
+    <div class="fit-box">
+      <img src="images/cat.png" class="fill" alt="fill" />
+      <p>fill</p>
+    </div>
+    <div class="fit-box">
+      <img src="images/cat.png" class="contain" alt="contain" />
+      <p>contain</p>
+    </div>
+    <div class="fit-box">
+      <img src="images/cat.png" class="cover" alt="cover" />
+      <p>cover</p>
+    </div>
+    <div class="fit-box">
+      <img src="images/cat.png" class="none" alt="none" />
+      <p>none</p>
+    </div>
+    <div class="fit-box">
+      <img src="images/cat.png" class="scale-down" alt="scale-down" />
+      <p>scale-down</p>
+    </div>
+  </section>
+
+</body>
+</html>
