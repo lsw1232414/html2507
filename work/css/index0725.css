@@ -34,9 +34,22 @@
     font-size: 1pt;
 }
 
-@media screen and (min-width: 1500px) and (max-width: 2000px) {
+@media screen and (min-width: 768px) {
     body {
-        background-color: black;
+        background-color: rgb(255,255,255);
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        background-color: rgb(133,133,133);
+    }
+
+}
+@media screen and (min-width: 1440px) {
+    body {
+        background-color: rgb(30,30,30);
     }
 
 }
