@@ -1,6 +1,6 @@
 body {
-  background: #f4f4f4;
-  color: black;
+  background: linear-gradient(135deg, #eef2f3, #d2e1ec);
+  color: #333;
   padding: 40px 20px;
 }
 
@@ -59,7 +59,7 @@ p {
 }
 
 .hw:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  box-shadow: 10px 10px 10px gray
 }
 
 .hw-title {
@@ -69,28 +69,31 @@ p {
 }
 
 .hw-title .day {
+  font-size: 18px;
   display: block;
+  font-weight: 600;
   color: black;
 }
 
 .hw-title .date {
   display: block;
-  font-size: 13px;
-  color: #777;
+  font-size: 14px;
+  color: gray;
 }
+
 
 .hw a {
   font-size: 17px;
-  color: #2980b9;
+  color: rgb(75, 75, 224);
   text-decoration: none;
-  display: block;
+  display: inline-block;
   font-weight: bold;
-  transition: transform 0.2s, color 0.2s;
+  transition: transform 0.2s
 }
 
 .hw a:hover {
   transform: scale(1.15);
-  color: #1a5276;
+
 }
 
 .hw.empty {
